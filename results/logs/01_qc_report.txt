@@ -1,0 +1,42 @@
+Step 01 - extraction and identity validation
+========================================================================
+
+1. EXTRACTION
+  [PASS] Foundation Input row count == 417  - got 417
+  [PASS] column 'Quantity Reported' present
+  [PASS] Date column has no nulls
+  [PASS] pile rows (Code == 'Pile') == 186  - got 186
+  [PASS] column Q fully populated on pile rows
+  [PASS] sum of column Q == 7710.4 m  - got 7710.4000000000
+  [PASS] nominal diameter constant at 1.2 m
+  [PASS] distinct piers == 17  - got 17
+  [PASS] distinct working days == 138
+  [PASS] rig-days == 149  - got 149
+  [PASS] matches the workbook summary tab (cumulative pile length)  - tab 7710.3999999999905 vs extract 7710.4
+
+2. ANONYMISATION (applied in step 00, verified here)
+  rigs        : ['RIG-A', 'RIG-B', 'RIG-C']
+  contractors : ['SC-1']
+  [PASS] no personnel column in the public extract
+  [PASS] every pile row carries a rig code and a contractor code
+
+3. IDENTITY VALIDATION
+  F1  L = CutOff - Toe        n=186  mean +0.0376 m   sd 0.5133   max|r| 7.0000   within 0.5 m: 185/186
+  F2  V = pi/4 D^2 (L + c)    n=186  mean -0.000671 m3  sd 0.001954  max|r| 0.004508  within 0.01 m3: 186/186
+  [PASS] F1 holds within 0.5 m on >=185 of 186  - got 185
+  [PASS] F2 holds within 0.01 m3 on all 186  - max 0.004508
+  F1 exception(s):
+      Date Structure ID rig_code  Quantity Reported  length_calc_m  resid_F1_m
+2026-03-01          P-4    RIG-C               45.0           38.0         7.0
+
+4. DERIVED VARIABLES
+  [PASS] overbreak pairs == 106  - got 106
+  [PASS] test pile flagged exactly once
+  eta: n=106  mean 1.0350  median 1.0328  min 0.9571  max 1.1494
+  sequence index runs 1..185 (test pile excluded)
+
+5. OUTPUTS
+  data/derived/pile_analysis_table.csv           186 rows x 22 cols
+  results/tables/Table_03_identity_validation.csv  2 rows
+
+ALL QC CHECKS PASSED

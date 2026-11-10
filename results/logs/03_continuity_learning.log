@@ -1,0 +1,49 @@
+production window 2025-10-20 to 2026-06-18: 242 calendar days, 137 worked
+worked / available by weekday: {'Monday': 0.6, 'Tuesday': 0.6, 'Wednesday': 0.486, 'Thursday': 0.629, 'Friday': 0.441, 'Saturday': 0.588, 'Sunday': 0.618}
+
+Table 6 - pier cycles (test pile excluded)
+  cycle pier      first       last  piles   M_m  D_working_days  S_span_days  Rw_m_per_workday  Rc_m_per_calday  kappa   rig rig_mix
+     1 P-20 2025-10-20 2025-11-03     12 552.0              12           15             46.00            36.80  0.800 RIG-A  single
+     2 P-22 2025-10-27 2025-11-13     12 566.4              12           18             47.20            31.47  0.667 RIG-A  single
+     3 P-21 2025-11-05 2025-12-09     12 584.4              12           35             48.70            16.70  0.343 RIG-A  3 rigs
+     4 P-23 2025-11-14 2025-11-28     12 386.4              11           15             35.13            25.76  0.733 RIG-B  2 rigs
+     5 P-24 2025-11-24 2025-12-04     12 404.4              10           11             40.44            36.76  0.909 RIG-B  single
+     6   A2 2025-12-12 2025-12-21      8 269.6               7           10             38.51            26.96  0.700 RIG-C  single
+     7  P-9 2026-01-10 2026-01-28     12 552.0              12           19             46.00            29.05  0.632 RIG-C  single
+     8  P-7 2026-01-11 2026-01-29     12 540.0              12           19             45.00            28.42  0.632 RIG-C  single
+     9  P-8 2026-01-18 2026-02-04     12 528.0              12           18             44.00            29.33  0.667 RIG-C  single
+    10  P-6 2026-01-30 2026-02-23     12 456.0              12           25             38.00            18.24  0.480 RIG-C  single
+    11  P-2 2026-02-03 2026-03-09     12 420.0              12           35             35.00            12.00  0.343 RIG-B  single
+    12  P-1 2026-02-04 2026-03-12     10 350.0              10           37             35.00             9.46  0.270 RIG-B  single
+    13  P-5 2026-02-06 2026-03-10     10 380.0              10           33             38.00            11.52  0.303 RIG-C  single
+    14  P-4 2026-03-01 2026-03-01      1  45.0               1            1             45.00            45.00  1.000 RIG-C  single
+    15 P-18 2026-04-02 2026-04-18     12 566.4              12           17             47.20            33.32  0.706 RIG-C  single
+    16 P-19 2026-04-16 2026-04-30     12 548.4              12           15             45.70            36.56  0.800 RIG-C  single
+    17 P-10 2026-05-16 2026-06-18     12 512.4              12           34             42.70            15.07  0.353 RIG-C  single
+
+ranges  kappa 0.27-0.91 (3.4x)   Rw 35.0-48.7 (1.4x)   Rc 9.5-36.8 (3.9x)
+
+kappa analysis on 16 cycles (P-4 excluded: single pile, kappa degenerate)
+Pearson r: kappa~Rw +0.334   kappa~Rc +0.963
+  95% CI  kappa~Rw [-0.199,+0.788]   kappa~Rc [+0.911,+0.991]
+alternative kappa (intervals): r with kappa = 0.9997
+
+Table 7 - learning models (cumulative-average rig-days per pile, n=185)
+               Model  Params    RSS     AIC  dAIC                                                                  Key
+    Null (constant)       1 0.8949  -984.3 355.7                                                                     
+   Wright power law       2 0.2911 -1190.1 149.9 b=0.0698 [95% CI 0.0602,0.0784]  learning rate s=0.953 [0.947,0.959]
+        Exponential       3 0.1281 -1340.0   0.0                              k=0.0524, asymptote=0.746 rig-days/pile
+Wright + forgetting       4 0.1490 -1309.9  30.1                               b=0.1132, gamma=+0.002017 per idle day
+
+cumulative average: first pile 1.000 -> final 0.800 rig-days/pile; Wright improves on the null by 205.8 AIC units
+pier-cycle level: d ln Rw / d ln cycle = -0.0423  95% CI [-0.1086,+0.0559]  -> NO learning detected
+
+Table 8 - unit-level trend over the programme
+             Metric  n_rigdays  First_half  Second_half  Slope_per_rigday  CI95_low  CI95_high                  Verdict
+ Piles per rig-day        148       1.392        1.108          -0.00278  -0.00419   -0.00150 declines (CI excludes 0)
+Metres per rig-day        148      58.476       45.057          -0.11710  -0.17540   -0.06411 declines (CI excludes 0)
+  Piles per rig-day: change first->second half -20.4%
+  Metres per rig-day: change first->second half -22.9%
+share of rig-days delivering 2 piles, by thirds (third, %, n): [(1, np.float64(32.0), 50), (2, np.float64(40.8), 49), (3, np.float64(2.0), 49)]
+
+wrote Tables 6, 7, 8 and Figures 4, 5, 6

@@ -1,0 +1,8 @@
+Metric,Unit,n,Min,Q1,Median,Q3,Max,Mean,SD,CI95_low,CI95_high
+Pile length,m,186,32.2,35.0,44.0,46.0,49.0,41.454,5.628,40.611,42.229
+Daily installed length,m/working day,138,32.2,42.7,46.0,72.25,117.0,55.872,21.321,52.49,59.488
+Piles completed per day,piles/day,138,1.0,1.0,1.0,2.0,3.0,1.348,0.536,1.254,1.428
+Piles per rig-day,piles/rig-day,149,1.0,1.0,1.0,1.0,2.0,1.248,0.433,1.174,1.315
+Length per rig-day,m/rig-day,149,32.2,38.0,45.7,49.0,95.9,51.748,19.06,48.957,54.985
+Labour productivity,m/man-hour,138,0.201,0.267,0.288,0.452,0.731,0.349,0.133,0.328,0.372
+Unit labour rate,man-hour/m,138,1.368,2.215,3.478,3.747,4.969,3.224,1.0,3.062,3.388

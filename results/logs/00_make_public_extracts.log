@@ -1,0 +1,6 @@
+9f057fbd6d5733c6e39878641b647b0dea728856d28c166405915bd2d0ad4a6c  DPR Backup sheet.xlsx  (270664 bytes)
+2504357823761f3b0ad3260e4f9d837a4800cce93b5fded1f946a489529924a8  ZZHE-MIL-DS-12B DPR-Internal R0.xlsx  (4178100 bytes)
+
+foundation_input_records.csv  417 rows x 26 cols (personnel column removed; rigs ['RIG-A', 'RIG-B', 'RIG-C']; subcontractors ['SC-1', 'SC-2', 'SC-3', 'SC-4', 'SC-5'])
+summary tab: cumulative pile length 7710.3999999999905 m
+client_dpr_daily_pile_length.csv  138 non-zero days of 1462 date columns, total 7676.40 m

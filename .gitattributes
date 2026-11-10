@@ -1,0 +1,9 @@
+# Keep text files byte-identical across Windows, macOS and Linux checkouts
+*.py   text eol=lf
+*.csv  text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.cff  text eol=lf
+*.png  binary
+*.pdf  binary

@@ -1,0 +1,6 @@
+Term,Coef,OddsRatio,CI95_low,CI95_high,Verdict
+intercept,-2.4928,0.083,-32.7073,0.1592,--
+rig-day sequence (z),-1.1709,0.31,-2.3606,-0.2581,excludes 0
+mean pile length (z),0.1509,1.163,-0.7868,0.8777,includes 0
+RIG-B vs A,1.3953,4.036,-2.0181,31.8942,includes 0
+RIG-C vs A,1.5327,4.63,-1.3273,31.852,includes 0

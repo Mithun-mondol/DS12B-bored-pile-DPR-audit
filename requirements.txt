@@ -1,0 +1,7 @@
+# Versions used to produce the published results (Python 3.10).
+numpy==2.2.6
+pandas==2.3.3
+matplotlib==3.10.9
+# Authors-only steps: 00 reads the original workbooks, 06 reads the site-investigation PDFs.
+openpyxl==3.1.5
+pypdf==6.18.0

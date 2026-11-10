@@ -1,0 +1,15 @@
+Item,Value
+Piles,186 (185 production + 1 contractual test pile)
+Piers / abutments,"17 (12 piles each, except P-4 n=1, P-1/P-5 n=10, A2 n=8, P-21 n=13)"
+Nominal shaft diameter,1.20 m (invariant)
+Total installed length,7710.4 m
+Period,2025-03-20 to 2026-06-18
+Working days with piling,138
+Rig-days,149 (3 rigs; 11 days ran two rigs)
+Site crew,"20 persons, 8 h shift (invariant)"
+Specialist subcontractor,1 (all 186 piles)
+Completeness: length (col Q),186/186 (100%)
+Completeness: cut-off & toe levels,186/186 (100%)
+Completeness: theoretical volume,186/186 (100%)
+Completeness: placed volume,106/186 (57%)
+Completeness: crew recorded,127/186 (68%)

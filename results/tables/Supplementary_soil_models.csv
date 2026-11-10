@@ -1,0 +1,37 @@
+Model,Outcome,Soil_covariate,n_rigdays,clusters,valid_replicates,R2,Term,Coef,CI95_low,CI95_high,Interval
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,intercept,60.1475,-18.5777,86.099,includes 0
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,rig-day sequence (z),-1.5073,-34.9215,19.2801,includes 0
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,mean pile length (z),0.2323,-17.906,58.5838,includes 0
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,RIG-B vs A,-24.5178,-65.9087,145.9701,includes 0
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,RIG-C vs A,-10.3994,-54.5836,78.5014,includes 0
+M2,metres per rig-day,cohesionless fraction (z),80,9,1751,0.304,cohesionless fraction (z),5.8278,-11.5311,18.3862,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,intercept,72.4364,-25.1144,89.2461,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,rig-day sequence (z),1.7008,-29.9771,13.7762,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,mean pile length (z),0.5475,-17.567,82.2505,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,RIG-B vs A,-35.1241,-71.0427,192.1054,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,RIG-C vs A,-30.1575,-63.4411,86.6785,includes 0
+M2,metres per rig-day,shaft-weighted mean N (z),80,9,1718,0.387,shaft-weighted mean N (z),10.2919,-12.9372,27.4072,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,intercept,65.5788,-121.3357,111.9658,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,rig-day sequence (z),1.0715,-58.6351,27.4336,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,mean pile length (z),1.5632,-30.2966,180.2563,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,RIG-B vs A,-27.419,-206.4068,525.223,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,RIG-C vs A,-18.1771,-102.8573,152.8499,includes 0
+M2,metres per rig-day,N at the toe (z),68,8,1755,0.227,N at the toe (z),5.6412,-27.7234,65.5723,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,intercept,1.335,-0.0473,1.8839,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,rig-day sequence (z),-0.0408,-0.7477,0.3574,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,mean pile length (z),-0.1064,-0.5128,0.3255,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,RIG-B vs A,-0.5562,-1.4141,1.4945,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,RIG-C vs A,-0.2154,-1.0524,1.5594,includes 0
+M3,piles per rig-day,cohesionless fraction (z),80,9,1737,0.242,cohesionless fraction (z),0.1287,-0.2253,0.4186,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,intercept,1.6114,-0.4652,1.976,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,rig-day sequence (z),0.0321,-0.6886,0.287,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,mean pile length (z),-0.0999,-0.46,1.6338,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,RIG-B vs A,-0.7961,-1.6107,4.086,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,RIG-C vs A,-0.6595,-1.3709,2.3541,includes 0
+M3,piles per rig-day,shaft-weighted mean N (z),80,9,1737,0.336,shaft-weighted mean N (z),0.2301,-0.3171,0.5327,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,intercept,1.4627,-2.4342,2.4498,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,rig-day sequence (z),0.029,-1.3055,0.6034,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,mean pile length (z),-0.0896,-0.7614,2.8888,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,RIG-B vs A,-0.6473,-3.8531,9.7079,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,RIG-C vs A,-0.4098,-1.9294,3.4142,includes 0
+M3,piles per rig-day,N at the toe (z),68,8,1739,0.179,N at the toe (z),0.1288,-0.6526,1.2384,includes 0

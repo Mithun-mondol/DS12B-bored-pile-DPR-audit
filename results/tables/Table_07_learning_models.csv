@@ -1,0 +1,5 @@
+Model,Params,RSS,AIC,dAIC,Key
+Null (constant),1,0.8949,-984.3,355.7,
+Wright power law,2,0.2911,-1190.1,149.9,"b=0.0698 [95% CI 0.0602,0.0784]  learning rate s=0.953 [0.947,0.959]"
+Exponential,3,0.1281,-1340.0,0.0,"k=0.0524, asymptote=0.746 rig-days/pile"
+Wright + forgetting,4,0.149,-1309.9,30.1,"b=0.1132, gamma=+0.002017 per idle day"

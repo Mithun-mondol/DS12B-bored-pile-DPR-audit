@@ -1,0 +1,62 @@
+==========================================================================
+V1 - CROSS-FILE RECONCILIATION  (site log vs formal daily progress report)
+  formal DPR daily cells: 138  sum 7676.4 m
+  site log   daily cells: 138  sum 7710.4 m
+  dates where the two files disagree: 10
+    2025-03-15   site log      0.0   formal DPR     49.0   diff   -49.00
+    2025-03-20   site log     49.0   formal DPR      0.0   diff   +49.00
+    2025-12-04   site log     33.7   formal DPR      0.0   diff   +33.70
+    2025-12-06   site log      0.0   formal DPR     33.7   diff   -33.70
+    2025-12-07   site log      0.0   formal DPR     48.7   diff   -48.70
+    2025-12-09   site log     48.7   formal DPR      0.0   diff   +48.70
+    2026-01-19   site log     90.0   formal DPR     91.0   diff    -1.00
+    2026-03-10   site log     73.0   formal DPR     38.0   diff   +35.00
+    2026-04-15   site log     47.2   formal DPR     45.7   diff    +1.50
+    2026-04-16   site log     45.7   formal DPR     47.2   diff    -1.50
+  total discrepancy +34.00 m (0.44% of the site-log total)
+  piles recorded on those dates:
+pile_id       date pier rig_code  length_reported_m  is_test_pile
+ PL-001 2025-03-20 P-21    RIG-A               49.0          True
+ PL-059 2025-12-04 P-24    RIG-B               33.7         False
+ PL-061 2025-12-09 P-21    RIG-C               48.7         False
+ PL-084 2026-01-19  P-8    RIG-C               44.0         False
+ PL-085 2026-01-19  P-9    RIG-C               46.0         False
+ PL-148 2026-03-10  P-1    RIG-B               35.0         False
+ PL-149 2026-03-10  P-5    RIG-C               38.0         False
+ PL-161 2026-04-15 P-18    RIG-C               47.2         False
+ PL-162 2026-04-16 P-19    RIG-C               45.7         False
+
+==========================================================================
+V3 - REINFORCEMENT PAIRING (independent third measure)
+  rebar rows 186, dates 138, total 1043.092 Ton
+  1:1 pairing on (date,pier): matched 182, pile-only 0, rebar-only 0
+  steel intensity: mean 0.13552 Ton/m  sd 0.00240  CV 1.77%  min 0.13230 max 0.13954  n=182
+  -> a CV of 1.8% is an independent consistency check on the reported length
+
+==========================================================================
+V4/V7/V8/V9 - SENSITIVITY
+  V4 test pile: incl. mean daily 55.87 m (n=138) | excl. 55.92 m (n=137)  -> shift +0.05 m (+0.09%)
+  V7 missingness - piles WITH vs WITHOUT placed volume:
+     length m       with   41.97 (n=106)   without   40.77 (n=80)   diff +1.21
+     toe level m    with  -33.98 (n=106)   without  -34.14 (n=80)   diff +0.17
+     rig mix with:    {'RIG-C': np.int64(45), 'RIG-A': np.int64(37), 'RIG-B': np.int64(24)}
+     rig mix without: {'RIG-C': np.int64(59), 'RIG-B': np.int64(21)}
+     -> missingness is monotone in time (all 2026Q2 absent); not MCAR. Reported as MNAR.
+  V8 rig contrast, piles per rig-day:
+     pooled : {'RIG-A': (27.0, 1.333), 'RIG-B': (35.0, 1.286), 'RIG-C': (86.0, 1.209)}
+     2025Q4 : {'RIG-A': (27.0, 1.333), 'RIG-B': (17.0, 1.353), 'RIG-C': (8.0, 1.125)}
+  V9 kappa alt (intervals not days): mean 0.564 vs 0.584; r(alt,orig) 0.9997
+
+==========================================================================
+M1 - TWO PILES ON A RIG-DAY?  logistic regression (IRLS)
+  n=148 rig-days, 37 with two piles (25.0%)
+  cluster bootstrap over 17 piers, 2000 valid replicates
+
+                Term    Coef  OddsRatio  CI95_low  CI95_high    Verdict
+           intercept -2.4928      0.083  -32.7073     0.1592         --
+rig-day sequence (z) -1.1709      0.310   -2.3606    -0.2581 excludes 0
+mean pile length (z)  0.1509      1.163   -0.7868     0.8777 includes 0
+          RIG-B vs A  1.3953      4.036   -2.0181    31.8942 includes 0
+          RIG-C vs A  1.5327      4.630   -1.3273    31.8520 includes 0
+
+  McFadden pseudo-R2 = 0.0923   AIC 161.1 vs null 168.5

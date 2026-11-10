@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite the paper and this repository."
+title: "What daily progress reports can and cannot measure: data and code"
+type: software
+authors:
+  - family-names: Mondol
+    given-names: Pollab
+    orcid: "https://orcid.org/0009-0006-4646-4507"
+    affiliation: "SASEC Dhaka–Sylhet Corridor Road Investment Project, Max Group, Dhaka, Bangladesh"
+  - family-names: Mondol
+    given-names: Mithun
+    orcid: "https://orcid.org/0000-0002-7527-0369"
+    email: mithun.mondol@gmail.com
+    affiliation: "Saitama University, Japan; SASEC Dhaka–Sylhet Corridor Road Investment Project, Property Development Limited, Dhaka, Bangladesh"
+repository-code: "https://github.com/Mithun-mondol/DS12B-bored-pile-DPR-audit"
+license: MIT
+keywords:
+  - daily progress reports
+  - data validation
+  - productivity metrics
+  - learning curves
+  - bored piles
+preferred-citation:
+  type: article
+  title: "What daily progress reports can and cannot measure: Auditing productivity metrics from 186 bored piles"
+  authors:
+    - family-names: Mondol
+      given-names: Pollab
+      orcid: "https://orcid.org/0009-0006-4646-4507"
+    - family-names: Mondol
+      given-names: Mithun
+      orcid: "https://orcid.org/0000-0002-7527-0369"
+  year: 2026
+  status: submitted
